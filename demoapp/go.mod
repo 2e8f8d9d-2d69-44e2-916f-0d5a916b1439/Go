@@ -1,4 +1,4 @@
-module github.com/2e8f8d9d/demoapp/webservice
+module github.com/2e8f8d9d/go/demoapp/webservice
 
 go 1.15
 

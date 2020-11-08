@@ -4,13 +4,11 @@ import (
 	"database/sql"
 	"net/http"
 
-	// Comment
-	"github.com/2e8f8d9d/demoapp/webservice/controllers"
-	_ "github.com/go-sql-driver/mysql"
-)
+	"github.com/2e8f8d9d/go/demoapp/webservice/models"
+	"github.com/2e8f8d9d/go/demoapp/webservice/controllers"
 
-const (
-	connectionString = ""
+	// needed by sql
+	_ "github.com/go-sql-driver/mysql"
 )
 
 // HTTPRequest is used to make http requests
@@ -45,7 +43,7 @@ func main() {
 
 func createTable() error {
 
-	db, err := sql.Open("mysql", connectionString)
+	db, err := sql.Open("mysql", models.ConnectionString)
 	if err != nil {
 		panic(err.Error())
 	}
