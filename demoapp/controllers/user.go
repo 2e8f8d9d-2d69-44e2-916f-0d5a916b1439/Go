@@ -62,7 +62,7 @@ func (uc *userController) get(id int, w http.ResponseWriter) {
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
-	encodeResponseAsJSON(u,w)
+	encodeResponseAsJSON(u, w)
 }
 
 func (uc *userController) post(w http.ResponseWriter, r *http.Request) {
@@ -119,7 +119,7 @@ func (uc *userController) parseRequest(r *http.Request) (models.User, error) {
 	if err != nil {
 		switch {
 		case strings.HasPrefix(err.Error(), "json: unknown field "):
-            return models.User{}, err
+			return models.User{}, err
 		}
 		return models.User{}, err
 	}
