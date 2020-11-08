@@ -16,17 +16,16 @@ const (
 
 // User class
 type User struct {
-	ID			int
-	FirstName 	string
-	LastName 	string
+	ID        int
+	FirstName string
+	LastName  string
 }
-
 
 // GetUsers get all users from database
 func GetUsers() (*[]User, error) {
 	db, err := sql.Open("mysql", connectionString)
 	if err != nil {
-		return nil, errors.New("Unable to connect to database") 
+		return nil, errors.New("Unable to connect to database")
 	}
 
 	defer db.Close()
@@ -57,9 +56,9 @@ func GetUsers() (*[]User, error) {
 func AddUser(u User) (User, error) {
 	db, err := sql.Open("mysql", connectionString)
 	if err != nil {
-		return User{}, errors.New("Unable to connect to database") 
+		return User{}, errors.New("Unable to connect to database")
 	}
-	
+
 	if u.ID != 0 {
 		return User{}, errors.New("New User must no include id")
 	}
@@ -80,7 +79,7 @@ func AddUser(u User) (User, error) {
 func GetUserByID(id int) (User, error) {
 	db, err := sql.Open("mysql", connectionString)
 	if err != nil {
-		return User{}, errors.New("Unable to connect to database") 
+		return User{}, errors.New("Unable to connect to database")
 	}
 
 	defer db.Close()
@@ -112,7 +111,7 @@ func GetUserByID(id int) (User, error) {
 func UpdateUser(u User) (User, error) {
 	db, err := sql.Open("mysql", connectionString)
 	if err != nil {
-		return User{}, errors.New("Unable to connect to database") 
+		return User{}, errors.New("Unable to connect to database")
 	}
 
 	defer db.Close()
@@ -145,7 +144,7 @@ func UpdateUser(u User) (User, error) {
 func RemoveUserByID(id int) error {
 	db, err := sql.Open("mysql", connectionString)
 	if err != nil {
-		return errors.New("Unable to connect to database") 
+		return errors.New("Unable to connect to database")
 	}
 
 	defer db.Close()
