@@ -22,7 +22,7 @@ func main() {
 
 	// Init table
 	err := createTable()
-	if err != nil  {
+	if err != nil {
 		panic(err.Error())
 	} else {
 		println("users table created with id, first_name, last_name with primary key as id")
@@ -31,7 +31,7 @@ func main() {
 	controllers.RegisterControllers()
 	http.ListenAndServe(":3000", nil)
 
-	r := HTTPRequest{ Method: "Get"}
+	r := HTTPRequest{Method: "Get"}
 
 	switch r.Method {
 	case "GET":
