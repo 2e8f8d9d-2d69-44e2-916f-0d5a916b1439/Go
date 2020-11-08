@@ -11,7 +11,8 @@ import (
 )
 
 const (
-	connectionString = ""
+	//ConnectionString used in main to init database
+	ConnectionString = ""
 )
 
 // User class
@@ -23,7 +24,7 @@ type User struct {
 
 // GetUsers get all users from database
 func GetUsers() (*[]User, error) {
-	db, err := sql.Open("mysql", connectionString)
+	db, err := sql.Open("mysql", ConnectionString)
 	if err != nil {
 		return nil, errors.New("Unable to connect to database")
 	}
@@ -54,7 +55,7 @@ func GetUsers() (*[]User, error) {
 
 // AddUser add a user to the database
 func AddUser(u User) (User, error) {
-	db, err := sql.Open("mysql", connectionString)
+	db, err := sql.Open("mysql", ConnectionString)
 	if err != nil {
 		return User{}, errors.New("Unable to connect to database")
 	}
@@ -77,7 +78,7 @@ func AddUser(u User) (User, error) {
 
 //GetUserByID returns a user based on id
 func GetUserByID(id int) (User, error) {
-	db, err := sql.Open("mysql", connectionString)
+	db, err := sql.Open("mysql", ConnectionString)
 	if err != nil {
 		return User{}, errors.New("Unable to connect to database")
 	}
@@ -109,7 +110,7 @@ func GetUserByID(id int) (User, error) {
 
 //UpdateUser updates a user account
 func UpdateUser(u User) (User, error) {
-	db, err := sql.Open("mysql", connectionString)
+	db, err := sql.Open("mysql", ConnectionString)
 	if err != nil {
 		return User{}, errors.New("Unable to connect to database")
 	}
@@ -142,7 +143,7 @@ func UpdateUser(u User) (User, error) {
 
 // RemoveUserByID removes a user by id
 func RemoveUserByID(id int) error {
-	db, err := sql.Open("mysql", connectionString)
+	db, err := sql.Open("mysql", ConnectionString)
 	if err != nil {
 		return errors.New("Unable to connect to database")
 	}

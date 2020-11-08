@@ -1,3 +1,5 @@
+github.com/2e8f8d9d/go v0.0.0-20201108173753-d5c847b1b88d h1:tq5Qo+ruW1tYviCXWNZLmJzb92NStj4+OHx8xglOEuA=
+github.com/2e8f8d9d/go/demoapp v0.0.0-20201108173753-d5c847b1b88d h1:qPJ7x2kmL6l5tlHcnFDeivtutSbjeIJ7pto0yDjgLfM=
 github.com/aws/aws-sdk-go v1.35.23 h1:SCP0d0XvyJTDmfnHEQPvBaYi3kea1VNUo7uQmkVgFts=
 github.com/aws/aws-sdk-go v1.35.23/go.mod h1:tlPOdRjfxPBpNIwqDj61rmsnA85v9jc0Ps9+muhnW+k=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/2e8f8d9d/demoapp/webservice/models"
+	"github.com/2e8f8d9d/go/demoapp/webservice/models"
 )
 
 // UserController is the control for the users model
