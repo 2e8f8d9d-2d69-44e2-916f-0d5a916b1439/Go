@@ -5,14 +5,15 @@ import (
 	"errors"
 	"fmt"
 	"math/rand"
+	"os"
 
 	//Needed by database/sql/
 	_ "github.com/go-sql-driver/mysql"
 )
 
-const (
+var (
 	//ConnectionString used in main to init database
-	ConnectionString = ""
+	ConnectionString = os.Getenv("CONNECTIONSTRING")
 )
 
 // User class

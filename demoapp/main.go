@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"net/http"
 
-	"github.com/2e8f8d9d/go/demoapp/webservice/models"
 	"github.com/2e8f8d9d/go/demoapp/webservice/controllers"
+	"github.com/2e8f8d9d/go/demoapp/webservice/models"
 
 	// needed by sql
 	_ "github.com/go-sql-driver/mysql"
@@ -17,7 +17,6 @@ type HTTPRequest struct {
 }
 
 func main() {
-
 	// Init table
 	err := createTable()
 	if err != nil {
