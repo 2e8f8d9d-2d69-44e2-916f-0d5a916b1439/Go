@@ -1,0 +1,40 @@
+Networking
+
+routing through meraki // not just vpn concentrator // last pet called out by protrans
+
+what is in K8 rg-shared cluster
+
+Why enterprise SQL? is it needed
+
+parameterize non functional requirements per environment
+
+how are financial authorizations handled, security integrated // segregation of duty
+
+governance
+
+audit-able, traceable, 
+
+restrictions -- input validation
+
+Do you fall under fedramp, hipaa, sox2, sock404 (predefined policies to support)
+
+BCDR
+
+management
+
+monitoring and alerting  // who & what
+
+monitoring application gateway -- testing
+
+how do you validate regression tests
+
+- log analytics
+- vm backups // disk size // resource allocation
+- security center
+- light house
+- SIEM 
+- Cost analysis // azure advisory
+
+lead doc with we can only see future state // lowers. eval of the one subscription we see. restricted
+
+email bob about ams and protrans
